@@ -348,14 +348,11 @@ func (c *Display) paint(cnv *ui.Canvas) {
 	s := c.session()
 	pal := ui.CurrentPalette()
 	w, h := c.Width(), c.Height()
-	cnv.SetColor(colorDisplay.get())
-	cnv.FillRoundedRect(0, 0, w, h, 10)
+	border := toRGBA(pal.Border)
 	if c.IsFocused() {
-		cnv.SetColor(mix(colorDisplay.get(), colorAccent.get(), 0.55))
-	} else {
-		cnv.SetColor(pal.Border)
+		border = mix(colorDisplay.get(), colorAccent.get(), 0.55)
 	}
-	cnv.DrawRoundedRect(0, 0, w, h, 10)
+	strokeRoundRect(cnv, 0, 0, w, h, 10, border, colorDisplay.get())
 
 	inner := w - 2*displayPadding
 	muted := colorMuted.get()

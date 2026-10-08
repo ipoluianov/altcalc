@@ -313,11 +313,10 @@ func (c *Keypad) paintKey(cnv *ui.Canvas, k *calcKey, r [4]int) {
 	case k == c.hover && enabled:
 		bg = mix(bg, colorKeyHoverMix.get(), 0.07)
 	}
-	cnv.SetColor(bg)
-	cnv.FillRoundedRect(r[0], r[1], r[2], r[3], 7)
 	if !ui.IsDarkTheme && k.kind != keyEq {
-		cnv.SetColor(colorKeyBorder.get())
-		cnv.DrawRoundedRect(r[0], r[1], r[2], r[3], 7)
+		strokeRoundRect(cnv, r[0], r[1], r[2], r[3], 7, colorKeyBorder.get(), bg)
+	} else {
+		fillRoundRect(cnv, r[0], r[1], r[2], r[3], 7, bg)
 	}
 	// The labels of the functions get smaller in the small keys
 	if k.kind == keyFunc && r[3] < 40 {

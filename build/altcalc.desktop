@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=AltCalc
+Comment=Calculator
+Exec=altcalc
+Icon=altcalc
+Terminal=false
+Categories=Utility;Calculator;
+StartupNotify=false

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Solid tile in the AltBins style, the glyph inside in white -->
+  <rect x="8" y="8" width="240" height="240" rx="44" fill="#7048e8"/>
+  <!-- A calculator: the display and two rows of keys, the = key in yellow;
+       simple shapes, so it reads at 16x16 -->
+  <rect x="56" y="52" width="144" height="44" rx="10" fill="#fff"/>
+  <rect x="56" y="116" width="36" height="36" rx="8" fill="#fff"/>
+  <rect x="110" y="116" width="36" height="36" rx="8" fill="#fff"/>
+  <rect x="164" y="116" width="36" height="36" rx="8" fill="#fff"/>
+  <rect x="56" y="168" width="36" height="36" rx="8" fill="#fff"/>
+  <rect x="110" y="168" width="36" height="36" rx="8" fill="#fff"/>
+  <rect x="164" y="168" width="36" height="36" rx="8" fill="#ffd43b"/>
+</svg>
